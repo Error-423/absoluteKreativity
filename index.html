@@ -9,14 +9,14 @@
 
   /* ---------- Design tokens ---------- */
   :root{
-    --ink:#111111;
-    --paper:#f6f5f2;
-    --paper-dim:#ececE7;
-    --line:#d8d6cf;
-    --accent:#ff3d1a;
-    --muted:#6b6a64;
-    --dot:#111111;
-    --dot-soft:#c9c7bf;
+    --ink:#2b1a10;
+    --paper:#faf6ef;
+    --paper-dim:#f1e9dc;
+    --line:#ddccb4;
+    --accent:#c17f3e;
+    --muted:#8a7358;
+    --dot:#2b1a10;
+    --dot-soft:#c9b795;
     --maxw:1180px;
     --gutter:clamp(20px, 5vw, 64px);
     --serif: "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
@@ -88,7 +88,7 @@
     position:sticky;
     top:0;
     z-index:50;
-    background:rgba(246,245,242,0.92);
+    background:rgba(250,246,239,0.92);
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--line);
   }
@@ -478,7 +478,7 @@
     <svg class="dotband" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
       <defs>
         <pattern id="grid-a" width="24" height="24" patternUnits="userSpaceOnUse">
-          <rect x="10" y="10" width="4" height="4" fill="#111111" opacity=".18"/>
+          <rect x="10" y="10" width="4" height="4" fill="#2b1a10" opacity=".18"/>
         </pattern>
       </defs>
       <rect width="1200" height="64" fill="url(#grid-a)"/>
@@ -626,7 +626,7 @@
       <svg width="100%" height="100%" style="top:0; left:0; opacity:.14;" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <defs>
           <pattern id="grid-cta" width="26" height="26" patternUnits="userSpaceOnUse">
-            <rect x="11" y="11" width="4" height="4" fill="#f6f5f2"/>
+            <rect x="11" y="11" width="4" height="4" fill="#faf6ef"/>
           </pattern>
         </defs>
         <rect width="1200" height="600" fill="url(#grid-cta)"/>
@@ -691,8 +691,8 @@
 (function(){
   const NS = "http://www.w3.org/2000/svg";
   const DOT = 3;          // square dot size
-  const INK = "#111111";
-  const PAPER = "#f6f5f2";
+  const INK = "#2b1a10";
+  const PAPER = "#faf6ef";
 
   function sq(x,y,size,fill){
     const r = document.createElementNS(NS,"rect");
