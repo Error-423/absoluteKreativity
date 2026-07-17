@@ -703,14 +703,18 @@
     return r;
   }
 
-  // Concentric square "rings" made of evenly spaced dots along the ring perimeter
+  // Concentric square rings: dots walk the perimeter of a square (not a circle) at each radius
   function concentricRings(g, cx, cy, radii, fill, dotSize){
     radii.forEach(radius=>{
+      const perimeter = radius * 8;
       const steps = Math.max(16, Math.round(radius * 0.9));
       for(let i=0;i<steps;i++){
-        const t = (i/steps) * Math.PI * 2;
-        const x = cx + Math.cos(t) * radius;
-        const y = cy + Math.sin(t) * radius;
+        const pos = (i/steps) * perimeter;
+        let x, y;
+        if(pos < radius*2){ x = cx - radius + pos; y = cy - radius; }
+        else if(pos < radius*4){ x = cx + radius; y = cy - radius + (pos - radius*2); }
+        else if(pos < radius*6){ x = cx + radius - (pos - radius*4); y = cy + radius; }
+        else { x = cx - radius; y = cy + radius - (pos - radius*6); }
         g.appendChild(sq(x,y,dotSize,fill));
       }
     });
