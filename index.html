@@ -19,7 +19,7 @@
     --line:#4a3823;
     --accent:#d99a4e;
     --muted:#b3a184;
-    --dot:#f2e7d5;
+    --dot:#8c2f22;
     --dot-soft:#5a4630;
     --maxw:1180px;
     --gutter:clamp(20px, 5vw, 64px);
@@ -480,7 +480,7 @@
     <svg class="dotband" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
       <defs>
         <pattern id="grid-a" width="24" height="24" patternUnits="userSpaceOnUse">
-          <rect x="10" y="10" width="4" height="4" fill="#f2e7d5" opacity=".16"/>
+          <rect x="10" y="10" width="4" height="4" fill="#8c2f22" opacity=".55"/>
         </pattern>
       </defs>
       <rect width="1200" height="64" fill="url(#grid-a)"/>
@@ -625,10 +625,10 @@
   <section class="cta" id="contact">
     <div class="deco" aria-hidden="true">
       <!-- dot-grid band across the dark CTA, subtle, full-bleed background texture -->
-      <svg width="100%" height="100%" style="top:0; left:0; opacity:.14;" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <svg width="100%" height="100%" style="top:0; left:0; opacity:.5;" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <defs>
           <pattern id="grid-cta" width="26" height="26" patternUnits="userSpaceOnUse">
-            <rect x="11" y="11" width="4" height="4" fill="#f2e7d5"/>
+            <rect x="11" y="11" width="4" height="4" fill="#8c2f22"/>
           </pattern>
         </defs>
         <rect width="1200" height="600" fill="url(#grid-cta)"/>
@@ -693,8 +693,8 @@
 (function(){
   const NS = "http://www.w3.org/2000/svg";
   const DOT = 3;          // square dot size
-  const INK = "#d9c9a8";
-  const PAPER = "#f2e7d5";
+  const INK = "#8c2f22";
+  const PAPER = "#8c2f22";
 
   function sq(x,y,size,fill){
     const r = document.createElementNS(NS,"rect");
